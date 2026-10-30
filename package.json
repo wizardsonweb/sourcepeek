@@ -1,0 +1,127 @@
+{
+  "name": "sourcepeek",
+  "version": "5.12.1",
+  "description": "Click any UI element in dev mode to see its source file, line, component chain, props, state and where a value comes from. Web Vitals pointed at file:line, an MCP server for coding agents, Alt+click to your editor, and AI changes written into your code. React, Next.js, Vue, Svelte and Angular.",
+  "type": "module",
+  "bin": {
+    "sourcepeek": "bin/sourcepeek.js"
+  },
+  "main": "./src/react.js",
+  "types": "./types/react.d.ts",
+  "scripts": {
+    "test": "node --test"
+  },
+  "svelte": "./src/svelte/index.js",
+  "exports": {
+    ".": {
+      "types": "./types/react.d.ts",
+      "default": "./src/react.js"
+    },
+    "./react": {
+      "types": "./types/react.d.ts",
+      "default": "./src/react.js"
+    },
+    "./react-hook": {
+      "types": "./types/react-hook.d.ts",
+      "default": "./src/react-hook.js"
+    },
+    "./vue": {
+      "types": "./types/vue.d.ts",
+      "default": "./src/vue.js"
+    },
+    "./svelte": {
+      "types": "./types/svelte.d.ts",
+      "svelte": "./src/svelte/index.js",
+      "default": "./src/svelte/index.js"
+    },
+    "./angular": {
+      "types": "./types/angular.d.ts",
+      "default": "./src/angular.js"
+    },
+    "./angular/proxy": {
+      "types": "./types/angular-proxy.d.ts",
+      "default": "./src/angular-proxy.js"
+    },
+    "./vanilla": {
+      "types": "./types/vanilla.d.ts",
+      "default": "./src/vanilla.js"
+    },
+    "./vite": {
+      "types": "./types/vite.d.ts",
+      "default": "./src/vite.js"
+    },
+    "./next": {
+      "types": "./types/next.d.ts",
+      "import": "./src/next.mjs",
+      "require": "./src/next.cjs"
+    },
+    "./next/route": {
+      "types": "./types/next-route.d.ts",
+      "default": "./src/next-route.js"
+    },
+    "./next/api": {
+      "types": "./types/next-api.d.ts",
+      "default": "./src/next-api.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "bin",
+    "src",
+    "types",
+    "README.md",
+    "LICENSE"
+  ],
+  "sideEffects": [
+    "./src/react-hook.js"
+  ],
+  "keywords": [
+    "dev-tools",
+    "inspector",
+    "click-to-source",
+    "react",
+    "nextjs",
+    "vue",
+    "svelte",
+    "angular",
+    "vite",
+    "git",
+    "ai",
+    "mcp",
+    "web-vitals"
+  ],
+  "author": "Sourcepeek",
+  "license": "MIT",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "dependencies": {
+    "@babel/parser": "^7.26.0",
+    "magic-string": "^0.30.0"
+  },
+  "peerDependencies": {
+    "@angular/core": ">=16",
+    "react": ">=17",
+    "svelte": ">=3",
+    "vue": ">=3"
+  },
+  "peerDependenciesMeta": {
+    "@angular/core": {
+      "optional": true
+    },
+    "react": {
+      "optional": true
+    },
+    "svelte": {
+      "optional": true
+    },
+    "vue": {
+      "optional": true
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sourcepeek/sourcepeek.git"
+  },
+  "homepage": "https://github.com/sourcepeek/sourcepeek#readme"
+}
